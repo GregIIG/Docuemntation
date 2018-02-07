@@ -10,7 +10,8 @@
 ol {
   li.pr {
     background-color: yellow;
-    margin: 2px solid black;
+    border: 2px solid black;
+    border-radius: 5px;
     padding: 10px;
   }
 }
