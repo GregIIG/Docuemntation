@@ -6,3 +6,11 @@
 //= require_self
 
 // Put styles here!
+
+ol {
+  li.pr {
+    background-color: yellow;
+    margin: 2px solid black;
+    padding: 10px;
+  }
+}
