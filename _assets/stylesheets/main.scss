@@ -1,6 +1,8 @@
 @charset "utf-8";
 //= require vendor/bootstrap
 //= require vendor/bootstrap-theme
+//= require vendor/github
+//= require vendor/xcode
 // Remove the "do_not_" from the following line for font-awesome:
 //= do_not_require vendor/font-awesome
 //= require_self
@@ -8,16 +10,40 @@
 // Put styles here!
 
 ol {
+  list-style: none;
+  counter-reset: ol;
+  li {
+    counter-increment: li;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    padding: 10px;
+    &:before {
+      position: absolute;
+      content: counter(li);
+      font-size: 2em;
+      display: inline-block;
+      width: 1.5em;
+      margin-left: -2.5em;
+      margin-bottom: -1em;
+      margin-top: -0.5em;
+      text-align: center;
+      border-radius: 100%;
+    }
+  }
   li.pr {
+    &:before {
+      background-color: yellow;
+      border: 2px solid black;
+    }
     background-color: yellow;
     border: 2px solid black;
-    border-radius: 5px;
-    padding: 10px;
   }
   li.gr {
+    &:before {
+      background-color: pink;
+      border: 2px solid black;
+    }
     background-color: pink;
     border: 2px solid black;
-    border-radius: 5px;
-    padding: 10px;
   }
 }
